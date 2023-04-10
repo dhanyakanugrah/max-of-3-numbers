@@ -6,10 +6,10 @@ import pickle
 
 st.write("""
 # Max of 3 numbers App
-This app gives max among 3 input numbers
-Please choose number less than 10000000000
-""")
+This app gives maximum among 3 input numbers.
 
+""")
+st.write("Please choose number less than 10000000000.")
 st.header('Enter 3 numbers')
 
 def user_input_features():
