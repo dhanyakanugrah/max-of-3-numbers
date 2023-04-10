@@ -13,9 +13,9 @@ st.header('Enter 3 numbers')
 
 def user_input_features():
     
-    number_1 = st.number_input("first number",min_value=0,max_value=1000**1000,step=1)
-    number_2 = st.number_input("second number",min_value=0,max_value=1000**1000,step=1)
-    number_3 = st.number_input("third number",min_value=0,max_value=1000**1000,step=1)
+    number_1 = st.number_input("first number",min_value=0,max_value=1000000000,step=1)
+    number_2 = st.number_input("second number",min_value=0,max_value=1000000000,step=1)
+    number_3 = st.number_input("third number",min_value=0,max_value=1000000000,step=1)
 
     data = {'first number': number_1,
             'second number': number_2,
