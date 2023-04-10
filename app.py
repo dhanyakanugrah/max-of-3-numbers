@@ -9,9 +9,9 @@ st.write("""
 This app gives maximum among 3 input numbers.
 
 """)
-st.write("Please choose number less than 10000000000.")
-st.header('Enter 3 numbers')
 
+st.header('Enter 3 numbers')
+st.write("Please choose number less than 10000000000.")
 def user_input_features():
     
     number_1 = st.number_input("first number",min_value=0,max_value=10000000000,step=1)
