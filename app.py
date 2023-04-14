@@ -11,12 +11,12 @@ This app gives maximum among 3 input numbers.
 """)
 
 st.header('Enter 3 numbers')
-st.write("Please choose number less than 100000000000000.")
+
 def user_input_features():
     
-    number_1 = st.number_input("first number",min_value=0,max_value=100000000000000,step=1)
-    number_2 = st.number_input("second number",min_value=0,max_value=100000000000000,step=1)
-    number_3 = st.number_input("third number",min_value=0,max_value=100000000000000,step=1)
+    number_1 = st.number_input("first number",step=1)
+    number_2 = st.number_input("second number",step=1)
+    number_3 = st.number_input("third number",step=1)
 
     data = {'first number': number_1,
             'second number': number_2,
@@ -28,11 +28,16 @@ def user_input_features():
 
 df = user_input_features()
 
-st.subheader('Maximum :')
+list = []
+
+if st.button('Get Maximum'):
+    
+        
+        list = [df['first number'].values.tolist()[0], 
+                df['second number'].values.tolist()[0],
+                df['third number'].values.tolist()[0]]
 
 
-list = [df['first number'].values.tolist()[0], 
-        df['second number'].values.tolist()[0],
-        df['third number'].values.tolist()[0]]
-
-st.write(max(list))
+st.header('Maximum :')
+if list != []:
+        st.write(max(list))
